@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">NUB Android Developers</string>
+    <string name="md_shakib_uddin_bhuiyan">Md Shakib Uddin Bhuiyan</string>
+    <string-array name="developers">
+        <item>Evan Aktab</item>
+        <item>Arif Mannan</item>
+        <item>Raihan Islam</item>
+        <item>Saddam Hossen</item>
+        <item>Md Shakib Uddin Bhuiyan</item>
+        <item>Shohan</item>
+        <item>Tareq</item>
+    </string-array>
+</resources>
