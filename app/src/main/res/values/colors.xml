@@ -8,6 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="dividerColor">#000</color>
-    <color name="appBackGround">#EFEFEF</color>
+    <color name="appBackGround">#D5D5D5</color>
     <color name="cardTextColor">#000000</color>
 </resources>

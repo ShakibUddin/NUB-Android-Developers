@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         data = new TreeMap<>();
         profiles = new ArrayList<>();
 
-        //adding name and image source to hashmap
+        //adding name and image source to treemap
         data.put("Evan",R.drawable.evan);
         data.put("Mannan",R.drawable.mannan);
         data.put("Raihan",R.drawable.raihan);
@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         data.put("Sakib",R.drawable.sakib);
         data.put("Shohan",R.drawable.shohan);
         data.put("Tareq",R.drawable.tareq);
+        data.put("Nahid",R.drawable.nahid);
 
         //filling profiles list with profile object
         for(Map.Entry<String,Integer> entry: data.entrySet()){
