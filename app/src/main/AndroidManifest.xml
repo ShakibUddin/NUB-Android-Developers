@@ -4,14 +4,16 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:hardwareAccelerated="false"
-        android:largeHeap="true"
         android:theme="@style/Theme.NUBAndroidDevelopers">
-        <activity android:name=".shakib.ShakibUddin"></activity>
+        <activity android:name=".OurProjects"></activity>
+        <activity android:name=".Developers" />
+        <activity android:name=".shakib.ShakibUddin" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

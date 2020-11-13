@@ -20,10 +20,36 @@
         app:strokeColor="#FF777777"
         app:strokeWidth="1dp"/>
 
-    <ListView
-        android:id="@+id/developers"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:divider="@null"/>
+        android:orientation="horizontal">
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/developersPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/developers"
+            android:text="Developers"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/buttonBackgroundColor"
+            android:textColor="@color/buttonTextColor"/>
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/projectsPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/projects2"
+            android:text="Our Projects"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/buttonBackgroundColor"
+            android:textColor="@color/buttonTextColor"/>
+
+    </LinearLayout>
+
+
 </LinearLayout>

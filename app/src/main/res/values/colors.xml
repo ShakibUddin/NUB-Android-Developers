@@ -11,4 +11,6 @@
     <color name="appBackGround">#D5D5D5</color>
     <color name="cardTextColor">#000000</color>
     <color name="profileBorderColor">#FFFFFF</color>
+    <color name="buttonBackgroundColor">#FFFFFF</color>
+    <color name="buttonTextColor">#000000</color>
 </resources>
