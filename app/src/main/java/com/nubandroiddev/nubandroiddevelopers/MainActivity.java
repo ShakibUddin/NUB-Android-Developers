@@ -50,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
                 openDevelopersPage();
             }
         });
-        developersPage.setOnClickListener(new View.OnClickListener() {
+
+        projectsPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openOurProjectsPage();

@@ -22,13 +22,15 @@ public class Projects extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        ListView myProjectsListView = (ListView) container.findViewById(R.id.myProjectsList);
+        View rootView = inflater.inflate(R.layout.fragment_sakib_projects, container, false);
 
-        ArrayAdapter<CharSequence> projectsAdapter = ArrayAdapter.createFromResource(container.getContext(),R.array.sakib_projects, android.R.layout.simple_dropdown_item_1line);
+        ListView myProjectsListView = (ListView) rootView.findViewById(R.id.myProjectsList);
+
+        ArrayAdapter<CharSequence> projectsAdapter = ArrayAdapter.createFromResource(rootView.getContext(),R.array.sakib_projects, android.R.layout.simple_dropdown_item_1line);
         myProjectsListView.setAdapter(projectsAdapter);
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_projects, container, false);
+        return rootView;
     }
 
 }
