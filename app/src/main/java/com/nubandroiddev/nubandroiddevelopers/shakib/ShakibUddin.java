@@ -22,8 +22,6 @@ public class ShakibUddin extends AppCompatActivity {
         tabLayout = (TabLayout)findViewById(R.id.tabLayout);
         viewPager=(ViewPager)findViewById(R.id.viewPager);
 
-        TabAdapter adapter = new TabAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
-        viewPager.setAdapter(adapter);
 
         //naming tabs
         tabLayout.addTab(tabLayout.newTab().setText("Skills"));
@@ -31,6 +29,9 @@ public class ShakibUddin extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("Achievements"));
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        TabAdapter adapter = new TabAdapter(getSupportFragmentManager(), tabLayout.getTabCount());
+        viewPager.setAdapter(adapter);
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
