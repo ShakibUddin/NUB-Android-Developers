@@ -7,6 +7,19 @@
     android:orientation="vertical"
     android:background="@color/appBackGround"
     tools:context=".MainActivity">
+
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/carouselView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:fillColor="#FFFFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pageColor="#00000000"
+        app:radius="6dp"
+        app:slideInterval="3000"
+        app:strokeColor="#FF777777"
+        app:strokeWidth="1dp"/>
+
     <ListView
         android:id="@+id/developers"
         android:layout_width="match_parent"
