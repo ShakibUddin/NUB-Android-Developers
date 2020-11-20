@@ -23,4 +23,8 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- create some string for my activity -->
+    <string name="info">Nahid Hasan</string>
+    <string name="title">Software Developer</string>
+    <string name="skills">skills : </string>
 </resources>
