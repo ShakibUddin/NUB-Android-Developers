@@ -155,6 +155,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:text="Web Design and Development"
+        android:background="@drawable/custom_button"
         android:textAllCaps="false"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/button2"
@@ -168,22 +169,26 @@
         android:layout_marginLeft="4dp"
         android:layout_marginTop="16dp"
         android:text="Python"
+        android:background="@drawable/custom_button"
         android:textAllCaps="false"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@id/button"
         app:layout_constraintTop_toBottomOf="@id/button" />
 
+
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
         android:text="Java"
+        android:background="@drawable/custom_button"
         android:textAllCaps="false"
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        app:layout_constraintVertical_bias="0.294" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
