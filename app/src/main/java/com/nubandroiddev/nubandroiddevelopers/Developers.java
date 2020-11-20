@@ -10,6 +10,7 @@ import android.widget.ListView;
 
 import com.nubandroiddev.nubandroiddevelopers.nahid.NahidHasan;
 import com.nubandroiddev.nubandroiddevelopers.shakib.ShakibUddin;
+import com.nubandroiddev.nubandroiddevelopers.shohan.SohanIslam;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -73,6 +74,9 @@ public class Developers extends AppCompatActivity {
                         openNahidHasan();
                         break;
                     //make your case with your name to call your method
+                    case "Shohan":
+                        openSohanIslam();
+                        break;
                     default:
                         break;
                 }
@@ -85,7 +89,12 @@ public class Developers extends AppCompatActivity {
     }
 
     private void openNahidHasan() {
-        Intent intent=new Intent(Developers.this, NahidHasan.class);
+        Intent intent = new Intent(getApplicationContext(), NahidHasan.class);
+        startActivity(intent);
+    }
+  
+    private void openSohanIslam(){
+        Intent intent = new Intent(getApplicationContext(), SohanIslam.class);
         startActivity(intent);
     }
 }
