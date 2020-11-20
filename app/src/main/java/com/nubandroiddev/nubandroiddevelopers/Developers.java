@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.nubandroiddev.nubandroiddevelopers.nahid.NahidHasan;
 import com.nubandroiddev.nubandroiddevelopers.shakib.ShakibUddin;
 import com.nubandroiddev.nubandroiddevelopers.shohan.SohanIslam;
 
@@ -69,6 +70,9 @@ public class Developers extends AppCompatActivity {
                     case "Sakib":
                         openShakibUddin();
                         break;
+                    case "Nahid":
+                        openNahidHasan();
+                        break;
                     //make your case with your name to call your method
                     case "Shohan":
                         openSohanIslam();
@@ -83,6 +87,12 @@ public class Developers extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), ShakibUddin.class);
         startActivity(intent);
     }
+
+    private void openNahidHasan() {
+        Intent intent = new Intent(getApplicationContext(), NahidHasan.class);
+        startActivity(intent);
+    }
+  
     private void openSohanIslam(){
         Intent intent = new Intent(getApplicationContext(), SohanIslam.class);
         startActivity(intent);

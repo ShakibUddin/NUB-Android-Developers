@@ -13,6 +13,8 @@
         android:theme="@style/Theme.NUBAndroidDevelopers">
         <activity android:name=".shohan.SohanIslam"></activity>
         <activity android:name=".OurProjects"></activity>
+        <activity android:name=".nahid.NahidHasan"></activity>
+        <activity android:name=".OurProjects" />
         <activity android:name=".Developers" />
         <activity android:name=".shakib.ShakibUddin" />
         <activity android:name=".MainActivity">
