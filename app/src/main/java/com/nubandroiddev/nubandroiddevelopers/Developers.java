@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.nubandroiddev.nubandroiddevelopers.nahid.NahidHasan;
 import com.nubandroiddev.nubandroiddevelopers.shakib.ShakibUddin;
 
 import java.util.ArrayList;
@@ -68,6 +69,9 @@ public class Developers extends AppCompatActivity {
                     case "Sakib":
                         openShakibUddin();
                         break;
+                    case "Nahid":
+                        openNahidHasan();
+                        break;
                     //make your case with your name to call your method
                     default:
                         break;
@@ -77,6 +81,11 @@ public class Developers extends AppCompatActivity {
     }
     private void openShakibUddin(){
         Intent intent = new Intent(getApplicationContext(), ShakibUddin.class);
+        startActivity(intent);
+    }
+
+    private void openNahidHasan() {
+        Intent intent=new Intent(Developers.this, NahidHasan.class);
         startActivity(intent);
     }
 }
