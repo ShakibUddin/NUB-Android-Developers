@@ -1,4 +1,4 @@
-package com.nubandroiddev.nubandroiddevelopers;
+package com.nubandroiddev.nubandroiddevelopers.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,10 +11,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.nubandroiddev.nubandroiddevelopers.Developers;
+import com.nubandroiddev.nubandroiddevelopers.OurProjects;
+import com.nubandroiddev.nubandroiddevelopers.R;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;
 
@@ -64,12 +65,12 @@ public class HomeFragment extends Fragment {
         return root;
     }
     void openDevelopersPage(){
-        Intent intent = new Intent(getContext(),Developers.class);
+        Intent intent = new Intent(getContext(), Developers.class);
         startActivity(intent);
     }
 
     void openOurProjectsPage(){
-        Intent intent = new Intent(getContext(),OurProjects.class);
+        Intent intent = new Intent(getContext(), OurProjects.class);
         startActivity(intent);
     }
 }

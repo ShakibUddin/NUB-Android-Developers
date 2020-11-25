@@ -4,29 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.ListView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.nubandroiddev.nubandroiddevelopers.shakib.ShakibUddin;
-import com.synnapps.carouselview.CarouselView;
-import com.synnapps.carouselview.ImageListener;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import com.nubandroiddev.nubandroiddevelopers.fragments.HomeFragment;
+import com.nubandroiddev.nubandroiddevelopers.fragments.ProfileFragment;
 
 //TODO  add your portfolio in your section
 //      make a package of your name then create an activity their and start coding

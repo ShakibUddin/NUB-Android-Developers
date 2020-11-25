@@ -1,7 +1,6 @@
-package com.nubandroiddev.nubandroiddevelopers;
+package com.nubandroiddev.nubandroiddevelopers.fragments;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -12,13 +11,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -26,13 +22,13 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.nubandroiddev.nubandroiddevelopers.PublicVariables;
+import com.nubandroiddev.nubandroiddevelopers.R;
 
 import java.util.LinkedHashMap;
-import java.util.concurrent.Executor;
 
 public class SignUpFragment extends Fragment {
     private static final String TAG = "SignUp";
@@ -117,7 +113,7 @@ public class SignUpFragment extends Fragment {
                     emailAddressLayout.setError(errorMessage);
                 }
 
-                if (validatePin(extractPin(),PublicVariables.mPincode)) {
+                if (validatePin(extractPin(), PublicVariables.mPincode)) {
                     pinCodeValidated = true;
                     pinLayout.setError(null);
                 } else {

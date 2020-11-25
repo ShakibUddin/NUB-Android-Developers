@@ -1,4 +1,4 @@
-package com.nubandroiddev.nubandroiddevelopers;
+package com.nubandroiddev.nubandroiddevelopers.fragments;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -17,6 +17,8 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.nubandroiddev.nubandroiddevelopers.PublicVariables;
+import com.nubandroiddev.nubandroiddevelopers.R;
 
 public class ProfileFragment extends Fragment {
 
