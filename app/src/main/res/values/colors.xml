@@ -14,4 +14,5 @@
     <color name="buttonBackgroundColor">#FFFFFF</color>
     <color name="buttonTextColor">#000000</color>
     <color name="custombuttonBordercolor">#fffa65</color>
+    <color name="navBarBackColor">#FFFFFF</color>
 </resources>

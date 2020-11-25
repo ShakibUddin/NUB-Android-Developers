@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SignUpFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="100dp">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/usernameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="30"
+                android:hint="Username">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/usernameid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_marginTop="144dp"
+                    android:padding="20dp"
+                    android:maxLength="30"
+                    android:background="#E6E6E6"
+                    android:drawableStart="@drawable/ic_profile" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/emailLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="40"
+                android:hint="Email Address">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/emailid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_marginTop="144dp"
+                    android:padding="20dp"
+                    android:maxLength="40"
+                    android:inputType="textEmailAddress"
+                    android:background="#E6E6E6"
+                    android:drawableStart="@drawable/ic_email" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/passwordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/emailLayout"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/emailLayout"
+                app:layout_constraintTop_toBottomOf="@+id/emailLayout"
+                app:errorEnabled="true"
+                android:hint="Password"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                app:passwordToggleEnabled="true">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passwordid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_marginTop="144dp"
+                    android:padding="20dp"
+                    android:maxLength="20"
+                    android:background="#E6E6E6"
+                    android:inputType="textPassword"
+                    android:drawableStart="@drawable/ic_lock" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/confirmPasswordLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="20"
+                android:hint="Confirm Password"
+                app:passwordToggleEnabled="true">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/confirmPasswordid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_marginTop="144dp"
+                    android:padding="20dp"
+                    android:maxLength="20"
+                    android:inputType="textPassword"
+                    android:background="#E6E6E6"
+                    android:drawableStart="@drawable/ic_lock" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pinLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="4"
+                android:hint="Pin Code"
+                app:passwordToggleEnabled="true">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/pinid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:layout_marginTop="144dp"
+                    android:padding="20dp"
+                    android:maxLength="4"
+                    android:inputType="number"
+                    android:background="#E6E6E6"
+                    android:drawableStart="@drawable/ic_pin" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/createAccountid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/purple_500"
+                android:padding="10dp"
+                android:text="Create Account"
+                app:layout_constraintEnd_toEndOf="@+id/loginid"
+                app:layout_constraintStart_toStartOf="@+id/loginid"
+                app:layout_constraintTop_toBottomOf="@+id/loginid" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:text="Already have an account?"
+                    />
+                <TextView
+                    android:id="@+id/signinid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/purple_700"
+                    android:textSize="15sp"
+                    android:text="SignIn"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

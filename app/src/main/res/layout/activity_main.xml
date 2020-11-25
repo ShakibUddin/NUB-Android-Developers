@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,49 +8,36 @@
     android:background="@color/appBackGround"
     tools:context=".MainActivity">
 
-    <com.synnapps.carouselview.CarouselView
-        android:id="@+id/carouselView"
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:fillColor="#FFFFFFFF"
-        app:layout_constraintTop_toTopOf="parent"
-        app:pageColor="#00000000"
-        app:radius="6dp"
-        app:autoPlay="true"
-        app:slideInterval="2000"
-        app:strokeColor="#FF777777"
-        app:strokeWidth="1dp"/>
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"/>
 
-    <LinearLayout
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <Button
-            android:layout_weight="1"
-            android:id="@+id/developersPage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableTop="@drawable/developers"
-            android:text="Developers"
-            android:textAllCaps="false"
-            android:textSize="20sp"
-            android:layout_margin="10dp"
-            android:backgroundTint="@color/buttonBackgroundColor"
-            android:textColor="@color/buttonTextColor"/>
-        <Button
-            android:layout_weight="1"
-            android:id="@+id/projectsPage"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableTop="@drawable/projects2"
-            android:text="Our Projects"
-            android:textAllCaps="false"
-            android:textSize="20sp"
-            android:layout_margin="10dp"
-            android:backgroundTint="@color/buttonBackgroundColor"
-            android:textColor="@color/buttonTextColor"/>
+        android:layout_alignParentBottom="true"
+        android:background="@color/navBarBackColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu" />
 
-    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/hire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        app:elevation="10dp"
+        android:backgroundTint="@color/purple_700"
+        app:backgroundTint="@color/white"
+        app:tint="@color/white"
+        android:src="@drawable/ic_chat"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigation"
+        app:layout_constraintEnd_toEndOf="@+id/bottomNavigation"
+        app:layout_constraintStart_toStartOf="@+id/bottomNavigation"
+        app:layout_constraintTop_toTopOf="@+id/bottomNavigation" />
 
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

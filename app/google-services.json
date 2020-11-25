@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "7106324402",
+    "firebase_url": "https://nub-android-developers.firebaseio.com",
+    "project_id": "nub-android-developers",
+    "storage_bucket": "nub-android-developers.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:7106324402:android:0b4fa385b6913b1ea3e6ab",
+        "android_client_info": {
+          "package_name": "com.nubandroiddev.nubandroiddevelopers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "7106324402-9v1leusi3rso8k8u8ursd4t2ogegk19m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDO-niFQHAd6MBPVRPaQKm4DPS3wkvJwc4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "7106324402-9v1leusi3rso8k8u8ursd4t2ogegk19m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
