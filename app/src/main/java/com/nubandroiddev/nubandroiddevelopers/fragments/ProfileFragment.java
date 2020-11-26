@@ -1,12 +1,14 @@
 package com.nubandroiddev.nubandroiddevelopers.fragments;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -15,6 +17,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -133,6 +136,9 @@ public class ProfileFragment extends Fragment {
     }
 
     void getAnnouncements(FirebaseFirestore db){
+        ProgressDialog progressDialog = new ProgressDialog(getContext());
+        progressDialog.setMessage("Loading Announcements");
+        progressDialog.show();
         PublicVariables.announcements.clear();
         db.collection("announcements")
                 .get()
@@ -143,10 +149,11 @@ public class ProfileFragment extends Fragment {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 Log.d(TAG, document.getId() + " => " + document.getData());
                                 PublicVariables.announcements.add(document.getString("Meeting"));
-                                for(String announcement : PublicVariables.announcements){
-                                    announcements.append(announcement+"\n");
-                                }
                             }
+                            for(String announcement : PublicVariables.announcements){
+                                announcements.append(announcement+"\n");
+                            }
+                            progressDialog.dismiss();
                         } else {
                             Log.w(TAG, "Error getting documents.", task.getException());
                         }
