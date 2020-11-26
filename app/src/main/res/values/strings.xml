@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">NUB Android Developers</string>
     <string name="md_shakib_uddin_bhuiyan">Md Shakib Uddin Bhuiyan</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
     <string-array name="sakib_skills">
         <item>Java</item>
         <item>Python</item>

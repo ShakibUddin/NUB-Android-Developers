@@ -6,10 +6,12 @@ import androidx.fragment.app.Fragment;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.nubandroiddev.nubandroiddevelopers.fragments.HomeFragment;
 import com.nubandroiddev.nubandroiddevelopers.fragments.ProfileFragment;
 
@@ -21,13 +23,15 @@ import com.nubandroiddev.nubandroiddevelopers.fragments.ProfileFragment;
 
 //TODO  BUG:    Error icon is overlapping with toggle password icon
 
+
+
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "MainActivity";
     private FrameLayout frameLayout;
     private BottomNavigationView bottomNavigationView;
     private SharedPreferences mPreferences;
     private String sharedPrefFile = "com.nubandroiddev.nubandroiddevelopers";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
         //The getSharedPreferences() method (from the activity Context) opens the file at the given filename (sharedPrefFile) with the mode MODE_PRIVATE.
         mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+
+
 
         //I added this if statement to keep the selected fragment when rotating the device
         //and to initialise the first fragment
