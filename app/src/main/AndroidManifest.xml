@@ -2,14 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nubandroiddev.nubandroiddevelopers">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <meta-data
         android:name="com.google.firebase.messaging.default_notification_channel_id"
         android:value="@string/default_notification_channel_id" />
     <meta-data
         android:name="com.google.firebase.messaging.default_notification_icon"
         android:resource="@drawable/ic_notification" />
-
     <meta-data
         android:name="com.google.firebase.messaging.default_notification_color"
         android:resource="@color/purple_700" />
@@ -23,18 +23,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NUBAndroidDevelopers">
-        <activity android:name=".shohan.SohanIslam"></activity>
-        <activity android:name=".OurProjects"></activity>
-        <activity android:name=".nahid.NahidHasan"></activity>
+        <activity android:name=".Tariqul.TariqIslam"></activity>
+        <activity android:name=".shohan.SohanIslam" />
+        <activity android:name=".OurProjects" />
+        <activity android:name=".nahid.NahidHasan" />
         <activity android:name=".Developers" />
         <activity android:name=".shakib.ShakibUddin" />
 
-        <service
-            android:name=".fcm.MyFirebaseInstanceIDService">
+        <service android:name=".fcm.MyFirebaseInstanceIDService">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
