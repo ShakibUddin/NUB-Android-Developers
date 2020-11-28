@@ -30,11 +30,6 @@
         <activity android:name=".Developers" />
         <activity android:name=".shakib.ShakibUddin" />
 
-        <service android:name=".fcm.MyFirebaseInstanceIDService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
 
         <activity android:name=".MainActivity">
             <intent-filter>
