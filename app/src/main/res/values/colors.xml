@@ -15,4 +15,5 @@
     <color name="buttonTextColor">#000000</color>
     <color name="custombuttonBordercolor">#fffa65</color>
     <color name="navBarBackColor">#FFFFFF</color>
+    <color name="maroon">#b03060</color>
 </resources>

@@ -7,9 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
 import com.nubandroiddev.nubandroiddevelopers.adapters.ProfileAdapter;
 import com.nubandroiddev.nubandroiddevelopers.model.Profile;
+import com.nubandroiddev.nubandroiddevelopers.Tariqul.TariqIslam;
 import com.nubandroiddev.nubandroiddevelopers.nahid.NahidHasan;
 import com.nubandroiddev.nubandroiddevelopers.shakib.ShakibUddin;
 import com.nubandroiddev.nubandroiddevelopers.shohan.SohanIslam;
@@ -79,6 +79,8 @@ public class Developers extends AppCompatActivity {
                     case "Shohan":
                         openSohanIslam();
                         break;
+                    case "Tareq":
+                        openTariqulIslam();
                     default:
                         break;
                 }
@@ -97,6 +99,10 @@ public class Developers extends AppCompatActivity {
   
     private void openSohanIslam(){
         Intent intent = new Intent(getApplicationContext(), SohanIslam.class);
+        startActivity(intent);
+    }
+    private void openTariqulIslam(){
+        Intent intent = new Intent(getApplicationContext(), TariqIslam.class);
         startActivity(intent);
     }
 }

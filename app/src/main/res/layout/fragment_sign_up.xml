@@ -63,6 +63,7 @@
                 app:layout_constraintStart_toStartOf="@+id/emailLayout"
                 app:layout_constraintTop_toBottomOf="@+id/emailLayout"
                 app:errorEnabled="true"
+                android:clickable="true"
                 android:hint="Password"
                 app:counterEnabled="true"
                 app:counterMaxLength="20"
