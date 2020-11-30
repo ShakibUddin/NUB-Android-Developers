@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/appBackGround"
     tools:context=".fragments.ProfileFragment">
 
     <com.google.android.material.textview.MaterialTextView
@@ -20,36 +21,42 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/materialTextView"
+    <Button
+        android:id="@+id/chat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Chat"
+        android:textAllCaps="false"
+        android:textSize="20sp"
         android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username" />
+
+    <Button
+        android:id="@+id/announcements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:padding="10dp"
         android:text="Announcements"
         android:textAllCaps="false"
-        android:textColor="@color/purple_700"
         android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/username"
-        tools:layout_editor_absoluteX="10dp" />
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chat" />
 
-   <androidx.cardview.widget.CardView
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_margin="10dp"
-       app:cardElevation="10dp"
-       app:cardUseCompatPadding="true"
-       app:layout_constraintTop_toBottomOf="@+id/materialTextView"
-       tools:layout_editor_absoluteX="10dp">
-       <com.google.android.material.textview.MaterialTextView
-           android:id="@+id/announcements"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:padding="10dp"
-           android:textAllCaps="false"
-           android:textColor="@color/black"
-           android:textSize="20sp"
-            />
-   </androidx.cardview.widget.CardView>
+    <Button
+        android:id="@+id/report"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Report"
+        android:layout_margin="10dp"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/announcements" />
 </androidx.constraintlayout.widget.ConstraintLayout>

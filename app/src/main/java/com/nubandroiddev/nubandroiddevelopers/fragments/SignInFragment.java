@@ -148,7 +148,6 @@ public class SignInFragment extends Fragment {
     }
     void updateUI(FirebaseUser firebaseUser){
         if(firebaseUser!=null){
-            PublicVariables.currentUser = firebaseUser;
             Toast.makeText(getActivity(), "Welcome",
                     Toast.LENGTH_SHORT).show();
             openProfileFragment();

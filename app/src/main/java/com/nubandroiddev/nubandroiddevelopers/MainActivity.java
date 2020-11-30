@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.nubandroiddev.nubandroiddevelopers.fragments.HomeFragment;
 import com.nubandroiddev.nubandroiddevelopers.fragments.ProfileFragment;
@@ -30,20 +32,18 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private FrameLayout frameLayout;
     private BottomNavigationView bottomNavigationView;
-    private SharedPreferences mPreferences;
-    private String sharedPrefFile = "com.nubandroiddev.nubandroiddevelopers";
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        enableOfflinePersistence();
+
         frameLayout = (FrameLayout)findViewById(R.id.fragmentContainer);
         bottomNavigationView = (BottomNavigationView)findViewById(R.id.bottomNavigation);
-
-        //The getSharedPreferences() method (from the activity Context) opens the file at the given filename (sharedPrefFile) with the mode MODE_PRIVATE.
-        mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
-
 
 
         //I added this if statement to keep the selected fragment when rotating the device
@@ -71,5 +71,11 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+    }
+    void enableOfflinePersistence(){
+        FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
+                .setPersistenceEnabled(true)
+                .build();
+        db.setFirestoreSettings(settings);
     }
 }

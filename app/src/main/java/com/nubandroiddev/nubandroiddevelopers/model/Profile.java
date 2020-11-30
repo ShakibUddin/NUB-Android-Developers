@@ -1,4 +1,4 @@
-package com.nubandroiddev.nubandroiddevelopers;
+package com.nubandroiddev.nubandroiddevelopers.model;
 
 public class Profile {
     private Integer imageSource;

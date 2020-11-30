@@ -8,7 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="dividerColor">#000</color>
-    <color name="appBackGround">#E4ECECEC</color>
+    <color name="appBackGround">#F1F1F1</color>
     <color name="cardTextColor">#000000</color>
     <color name="profileBorderColor">#FFFFFF</color>
     <color name="buttonBackgroundColor">#FFFFFF</color>

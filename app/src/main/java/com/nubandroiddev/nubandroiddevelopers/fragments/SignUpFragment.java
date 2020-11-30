@@ -204,9 +204,8 @@ public class SignUpFragment extends Fragment {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            PublicVariables.currentUser = user;
                             sendVerificationEmail();
-                            createProfile(PublicVariables.currentUser);
+                            createProfile(user);
                             openSignIn();
                             progressDialog.dismiss();
                         } else {

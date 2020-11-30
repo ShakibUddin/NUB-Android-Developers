@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.nubandroiddev.nubandroiddevelopers.adapters.ProfileAdapter;
+import com.nubandroiddev.nubandroiddevelopers.model.Profile;
 import com.nubandroiddev.nubandroiddevelopers.nahid.NahidHasan;
 import com.nubandroiddev.nubandroiddevelopers.shakib.ShakibUddin;
 import com.nubandroiddev.nubandroiddevelopers.shohan.SohanIslam;

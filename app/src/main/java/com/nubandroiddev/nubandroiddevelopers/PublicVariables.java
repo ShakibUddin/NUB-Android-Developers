@@ -8,6 +8,5 @@ import java.util.Map;
 
 public class PublicVariables {
     public static String mPincode = "";
-    public static FirebaseUser currentUser;
     public static List<String> announcements = new LinkedList<>();
 }
