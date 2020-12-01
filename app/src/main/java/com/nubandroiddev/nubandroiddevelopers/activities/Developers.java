@@ -1,4 +1,4 @@
-package com.nubandroiddev.nubandroiddevelopers;
+package com.nubandroiddev.nubandroiddevelopers.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,12 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import com.nubandroiddev.nubandroiddevelopers.R;
 import com.nubandroiddev.nubandroiddevelopers.adapters.ProfileAdapter;
 import com.nubandroiddev.nubandroiddevelopers.model.Profile;
-import com.nubandroiddev.nubandroiddevelopers.Tariqul.TariqIslam;
-import com.nubandroiddev.nubandroiddevelopers.nahid.NahidHasan;
-import com.nubandroiddev.nubandroiddevelopers.shakib.ShakibUddin;
-import com.nubandroiddev.nubandroiddevelopers.shohan.SohanIslam;
+import com.nubandroiddev.nubandroiddevelopers.activities.Tariqul.TariqIslam;
+import com.nubandroiddev.nubandroiddevelopers.activities.nahid.NahidHasan;
+import com.nubandroiddev.nubandroiddevelopers.activities.shakib.ShakibUddin;
+import com.nubandroiddev.nubandroiddevelopers.activities.shohan.SohanIslam;
 
 import java.util.ArrayList;
 import java.util.Map;

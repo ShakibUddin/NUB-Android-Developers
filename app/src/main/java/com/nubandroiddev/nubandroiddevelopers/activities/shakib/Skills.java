@@ -1,4 +1,4 @@
-package com.nubandroiddev.nubandroiddevelopers.shakib;
+package com.nubandroiddev.nubandroiddevelopers.activities.shakib;
 
 import android.os.Bundle;
 

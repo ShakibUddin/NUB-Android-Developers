@@ -1,6 +1,4 @@
-package com.nubandroiddev.nubandroiddevelopers.shakib;
-
-import android.content.Context;
+package com.nubandroiddev.nubandroiddevelopers.activities.shakib;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;

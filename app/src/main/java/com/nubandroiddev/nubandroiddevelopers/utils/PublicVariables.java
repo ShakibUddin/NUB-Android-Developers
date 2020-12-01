@@ -1,4 +1,4 @@
-package com.nubandroiddev.nubandroiddevelopers;
+package com.nubandroiddev.nubandroiddevelopers.utils;
 
 import com.google.firebase.auth.FirebaseUser;
 

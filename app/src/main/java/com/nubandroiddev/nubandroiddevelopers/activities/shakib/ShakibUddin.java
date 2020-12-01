@@ -1,11 +1,9 @@
-package com.nubandroiddev.nubandroiddevelopers.shakib;
+package com.nubandroiddev.nubandroiddevelopers.activities.shakib;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
-import android.widget.ImageView;
 
 import com.google.android.material.tabs.TabLayout;
 import com.nubandroiddev.nubandroiddevelopers.R;

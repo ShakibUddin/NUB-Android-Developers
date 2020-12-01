@@ -1,18 +1,14 @@
 package com.nubandroiddev.nubandroiddevelopers.fragments;
 
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -20,27 +16,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
-import com.nubandroiddev.nubandroiddevelopers.PublicVariables;
 import com.nubandroiddev.nubandroiddevelopers.R;
-
-import java.util.LinkedList;
-import java.util.List;
-
-import static android.content.ContentValues.TAG;
 
 public class ProfileFragment extends Fragment {
 
@@ -60,6 +41,7 @@ public class ProfileFragment extends Fragment {
     private Button announcements;
     private Button report;
     private Button chat;
+    private Button link;
     FirebaseFirestore db;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -74,6 +56,7 @@ public class ProfileFragment extends Fragment {
         announcements = (Button) root.findViewById(R.id.announcements);
         report = (Button)root.findViewById(R.id.report);
         chat = (Button)root.findViewById(R.id.chat);
+        link = (Button)root.findViewById(R.id.link);
 
         report.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,6 +76,13 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
+            }
+        });
+
+        link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openLinksFragment();
             }
         });
 
@@ -123,6 +113,15 @@ public class ProfileFragment extends Fragment {
         FragmentTransaction transaction = fm.beginTransaction();
         transaction.replace(R.id.fragmentContainer,
                 new ReportFragment());
+        transaction.addToBackStack("ProfileFragment");
+        transaction.commit();
+    }
+
+    void openLinksFragment(){
+        FragmentManager fm = getActivity().getSupportFragmentManager();
+        FragmentTransaction transaction = fm.beginTransaction();
+        transaction.replace(R.id.fragmentContainer,
+                new LinkFragment());
         transaction.addToBackStack("ProfileFragment");
         transaction.commit();
     }

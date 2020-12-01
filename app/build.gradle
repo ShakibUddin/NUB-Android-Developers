@@ -38,11 +38,14 @@ dependencies {
     implementation 'androidx.viewpager:viewpager:1.0.0'
     implementation 'com.google.firebase:firebase-firestore:22.0.0'
     implementation 'com.google.firebase:firebase-messaging:21.0.0'
-    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.synnapps:carouselview:0.1.4'
     implementation platform('com.google.firebase:firebase-bom:26.1.0')
     implementation 'com.google.firebase:firebase-auth'
     implementation "androidx.cardview:cardview:1.0.0"
+    implementation "org.jsoup:jsoup:1.11.3"
+    implementation "io.github.ponnamkarthik:richlinkpreview:1.0.9"
+    implementation 'com.squareup.picasso:picasso:2.71828'
 }

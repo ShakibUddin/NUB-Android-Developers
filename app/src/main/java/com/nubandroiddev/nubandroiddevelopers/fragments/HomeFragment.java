@@ -13,8 +13,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.nubandroiddev.nubandroiddevelopers.Developers;
-import com.nubandroiddev.nubandroiddevelopers.OurProjects;
+import com.nubandroiddev.nubandroiddevelopers.activities.Developers;
+import com.nubandroiddev.nubandroiddevelopers.activities.OurProjects;
 import com.nubandroiddev.nubandroiddevelopers.R;
 import com.synnapps.carouselview.CarouselView;
 import com.synnapps.carouselview.ImageListener;

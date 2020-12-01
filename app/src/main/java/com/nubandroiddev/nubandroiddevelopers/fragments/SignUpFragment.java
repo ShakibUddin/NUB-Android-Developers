@@ -25,7 +25,7 @@ import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.nubandroiddev.nubandroiddevelopers.PublicVariables;
+import com.nubandroiddev.nubandroiddevelopers.utils.PublicVariables;
 import com.nubandroiddev.nubandroiddevelopers.R;
 
 import java.util.LinkedHashMap;

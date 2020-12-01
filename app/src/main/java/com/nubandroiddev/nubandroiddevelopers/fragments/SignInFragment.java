@@ -22,7 +22,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.nubandroiddev.nubandroiddevelopers.PublicVariables;
 import com.nubandroiddev.nubandroiddevelopers.R;
 
 public class SignInFragment extends Fragment {

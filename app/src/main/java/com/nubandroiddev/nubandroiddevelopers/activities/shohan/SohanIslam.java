@@ -1,4 +1,4 @@
-package com.nubandroiddev.nubandroiddevelopers.shohan;
+package com.nubandroiddev.nubandroiddevelopers.activities.shohan;
 
 import androidx.appcompat.app.AppCompatActivity;
 

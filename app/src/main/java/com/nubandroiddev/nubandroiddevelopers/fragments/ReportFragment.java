@@ -9,26 +9,24 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.nubandroiddev.nubandroiddevelopers.PublicVariables;
 import com.nubandroiddev.nubandroiddevelopers.R;
 import com.nubandroiddev.nubandroiddevelopers.model.Report;
 import com.nubandroiddev.nubandroiddevelopers.adapters.ReportAdapter;
@@ -41,6 +39,7 @@ public class ReportFragment extends Fragment {
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private ListView reportListView;
+
 
     @Override
     public void onResume() {
@@ -57,6 +56,7 @@ public class ReportFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_report, container, false);
 
         reportListView = (ListView) root.findViewById(R.id.reports);
+
 
         fetchReports();
 
@@ -104,7 +104,6 @@ public class ReportFragment extends Fragment {
         progressDialog.setMessage("Loading Reports");
         progressDialog.show();
         ArrayList<Report> reports= new ArrayList<>();
-        DocumentReference docRef = db.collection("reports").document();
         db.collection("reports").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {

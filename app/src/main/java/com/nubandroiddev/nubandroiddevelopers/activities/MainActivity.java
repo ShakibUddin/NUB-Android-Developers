@@ -1,4 +1,4 @@
-  package com.nubandroiddev.nubandroiddevelopers;
+  package com.nubandroiddev.nubandroiddevelopers.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +14,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreSettings;
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.nubandroiddev.nubandroiddevelopers.R;
 import com.nubandroiddev.nubandroiddevelopers.fragments.HomeFragment;
 import com.nubandroiddev.nubandroiddevelopers.fragments.ProfileFragment;
 
