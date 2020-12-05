@@ -136,12 +136,12 @@ public class SignInFragment extends Fragment {
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
-                            progressDialog.dismiss();
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
                             updateUI(null);
                         }
+                        progressDialog.dismiss();
                     }
                 });
     }

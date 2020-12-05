@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -15,29 +17,19 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.google.android.material.textview.MaterialTextView;
 import com.nubandroiddev.nubandroiddevelopers.R;
 import com.nubandroiddev.nubandroiddevelopers.model.Link;
-import com.nubandroiddev.nubandroiddevelopers.model.Report;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
-
-import io.github.ponnamkarthik.richlinkpreview.MetaData;
-import io.github.ponnamkarthik.richlinkpreview.ResponseListener;
-import io.github.ponnamkarthik.richlinkpreview.RichLinkView;
-import io.github.ponnamkarthik.richlinkpreview.RichPreview;
-import io.github.ponnamkarthik.richlinkpreview.ViewListener;
-
-import static android.content.ContentValues.TAG;
+import java.util.LinkedList;
 
 public class LinkAdapter extends ArrayAdapter<Link> {
 
     private Context context;
     private int resource;
-    private MetaData data;
+    private LinkedList<Link> listForFiltering;
     private static final String TAG = "LinkAdapter";
 
 
@@ -45,52 +37,27 @@ public class LinkAdapter extends ArrayAdapter<Link> {
         super(context, resource, links);
         this.context = context;
         this.resource = resource;
+        listForFiltering = new LinkedList<>(links);
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        //RichLinkView richLinkView;
+        // Create an instance of the TextCrawler to parse your url into a preview.
         LinearLayout linkLayout;
-        TextView title;
-        TextView description;
-        TextView website;
-        ImageView imageView;
+        MaterialTextView title;
+        MaterialTextView link;
 
         LayoutInflater inflater = LayoutInflater.from(context);
         convertView = inflater.inflate(resource,parent,false);
 
-        //richLinkView = (RichLinkView) convertView.findViewById(R.id.richLinkView);
         linkLayout = (LinearLayout) convertView.findViewById(R.id.linkLayout);
-        title = (TextView) convertView.findViewById(R.id.title);
-        description = (TextView) convertView.findViewById(R.id.description);
-        website = (TextView) convertView.findViewById(R.id.website);
-        imageView = (ImageView) convertView.findViewById(R.id.image);
+        title = (MaterialTextView) convertView.findViewById(R.id.title);
+        link = (MaterialTextView) convertView.findViewById(R.id.link);
 
-        RichPreview richPreview = new RichPreview(new ResponseListener() {
-            @Override
-            public void onData(MetaData metaData) {
-                data = metaData;
 
-                //richLinkView.setLinkFromMeta(data);
-
-                Log.d(TAG,"title: "+data.getTitle());
-                Log.d(TAG,"description: "+data.getDescription());
-                Log.d(TAG,"website: "+data.getSitename());
-                Log.d(TAG,"imageView: "+data.getImageurl());
-                title.setText(data.getTitle());
-                description.setText(data.getDescription());
-                website.setText(data.getSitename());
-                Picasso.get().load(data.getImageurl()).into(imageView);
-            }
-
-            @Override
-            public void onError(Exception e) {
-                //handle error
-            }
-        });
-
-        richPreview.getPreview(getItem(position).getLink());
+        title.setText(getItem(position).getTitle());
+        link.setText(getItem(position).getLink());
 
         linkLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,6 +68,43 @@ public class LinkAdapter extends ArrayAdapter<Link> {
 
         return convertView;
     }
+
+    @NonNull
+    @Override
+    public Filter getFilter() {
+        return linkFilter;
+    }
+
+    private Filter linkFilter = new Filter() {
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            FilterResults results = new FilterResults();
+            LinkedList<Link> suggestions = new LinkedList<>();
+            if (constraint == null || constraint.length() == 0) {
+                suggestions.addAll(listForFiltering);
+            } else {
+                String filterPattern = constraint.toString().toLowerCase().trim();
+                for (Link link : listForFiltering) {
+                    if (link.getTitle().toLowerCase().contains(filterPattern) || link.getLink().toLowerCase().contains(filterPattern)) {
+                        suggestions.add(link);
+                    }
+                }
+            }
+            results.values = suggestions;
+            results.count = suggestions.size();
+            return results;
+        }
+        @Override
+        protected void publishResults(CharSequence constraint, FilterResults results) {
+            clear();
+            addAll((LinkedList) results.values);
+            notifyDataSetChanged();
+        }
+        @Override
+        public CharSequence convertResultToString(Object resultValue) {
+            return ((Link) resultValue).getLink();
+        }
+    };
 
     void openLink(Uri uri){
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);

@@ -2,13 +2,15 @@ package com.nubandroiddev.nubandroiddevelopers.model;
 
 public class Link {
     private String link;
+    private String title;
 
     public Link() {
 
     }
 
-    public Link(String link) {
+    public Link(String link, String title) {
         this.link = link;
+        this.title = title;
     }
 
     public String getLink() {
@@ -17,5 +19,13 @@ public class Link {
 
     public void setLink(String link) {
         this.link = link;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

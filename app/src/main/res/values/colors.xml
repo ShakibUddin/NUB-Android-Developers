@@ -16,4 +16,6 @@
     <color name="custombuttonBordercolor">#fffa65</color>
     <color name="navBarBackColor">#FFFFFF</color>
     <color name="maroon">#b03060</color>
+    <color name="blue800">#1B58F1</color>
+    <color name="transparent">#2F000000</color>
 </resources>

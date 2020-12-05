@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetContainer">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title"
+        app:counterEnabled="true"
+        app:counterMaxLength="100"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/titleid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="144dp"
+            android:background="@color/white"
+            android:inputType="text"
+            android:drawableTint="@color/purple_700"
+            android:drawableStart="@drawable/ic_title"
+            android:maxLength="100"
+            android:padding="20dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/linkLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Link Address"
+        app:counterEnabled="true"
+        app:counterMaxLength="200"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/linkid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="144dp"
+            android:background="@color/white"
+            android:drawableStart="@drawable/ic_link"
+            android:drawableTint="@color/purple_700"
+            android:inputType="textUri"
+            android:maxLength="200"
+            android:padding="20dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/postLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="28dp"
+        android:padding="10dp"
+        android:text="Post"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18sp"
+        />
+</LinearLayout>
