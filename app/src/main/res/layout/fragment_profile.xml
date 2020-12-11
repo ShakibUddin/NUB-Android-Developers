@@ -7,19 +7,47 @@
     android:background="@color/appBackGround"
     tools:context=".fragments.ProfileFragment">
 
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="147dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/ic_baseline_account_circle_24"
+        app:civ_border_color="#2196F3"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/camera"
+        android:layout_width="40dp"
+        android:layout_height="43dp"
+        android:src="@drawable/ic_baseline_camera_alt_24"
+        app:civ_border_color="#71716F"
+        app:civ_border_width="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.644"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="411dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
         android:padding="10dp"
         android:textAllCaps="false"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_margin="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/profile_image"
+        tools:ignore="MissingConstraints,NotSibling"
+        tools:layout_editor_absoluteX="2dp" />
 
     <Button
         android:id="@+id/chat"
